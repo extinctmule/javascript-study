@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="alert-box" id="alert">알림창1</div>
+    <button
+      onclick="document.querySelectorAll('.alert-box').forEach(el => el.style.display='block');"
+    >
+      버튼
+    </button>
+    <div class="alert-box" id="alert">알림창2</div>
+  </body>
+</html>

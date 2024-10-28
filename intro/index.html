@@ -9,19 +9,15 @@
   <body>
     <div class="alert-box" id="alert">
       <p id="p-alert">알림창</p>
-      <button onclick="toggleEditModal('none', '알림창')">X</button>
+      <button id="close">닫기</button>
     </div>
-    <button onclick="toggleEditModal('block','아이디를 입력하세요.')">
-      버튼1
-    </button>
-    <button onclick="toggleEditModal('block','비밀번호를 입력하세요.')">
-      버튼2
-    </button>
+    <button onclick="toggleEditModal('block','아이디를 입력하세요.')">버튼1</button>
+    <button onclick="toggleEditModal('block','비밀번호를 입력하세요.')">버튼2</button>
 
     <script>
-      function toggleEditModal(s, t = "") {
-        document.getElementById("alert").style.display = s;
-        document.getElementById("p-alert").innerHTML = t;
+      function toggleEditModal(s, t = '') {
+        document.getElementById('alert').style.display = s;
+        document.getElementById('p-alert').innerHTML = t;
       }
     </script>
   </body>

@@ -7,14 +7,16 @@
   </head>
   <body>
     <div class="alert-box" id="alert">
-      알림창!<button
-        onclick="document.getElementById('alert').style.display = 'none'"
-      >
-        X
-      </button>
+      알림창!<button onclick="toggleModal('none')">X</button>
     </div>
-    <button onclick="document.getElementById('alert').style.display ='block';">
-      버튼
-    </button>
+    <button onclick="toggleModal('block')">버튼</button>
+
+    <script>
+      function toggleModal(s) {
+        document.getElementById("alert").style.display = s;
+      }
+      console.log(toggleModal()); //undefined
+      console.log(toggleModal); //ƒ toggleModal(s) {document.getElementById("alert").style.display = s;}
+    </script>
   </body>
 </html>

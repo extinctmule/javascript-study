@@ -5,18 +5,24 @@
     <title>Document</title>
     <link rel="stylesheet" href="main.css" />
   </head>
+
   <body>
     <div class="alert-box" id="alert">
-      알림창!<button onclick="toggleModal('none')">X</button>
+      <p id="p-alert">알림창</p>
+      <button onclick="toggleEditModal('none', '알림창')">X</button>
     </div>
-    <button onclick="toggleModal('block')">버튼</button>
+    <button onclick="toggleEditModal('block','아이디를 입력하세요.')">
+      버튼1
+    </button>
+    <button onclick="toggleEditModal('block','비밀번호를 입력하세요.')">
+      버튼2
+    </button>
 
     <script>
-      function toggleModal(s) {
+      function toggleEditModal(s, t = "") {
         document.getElementById("alert").style.display = s;
+        document.getElementById("p-alert").innerHTML = t;
       }
-      console.log(toggleModal()); //undefined
-      console.log(toggleModal); //ƒ toggleModal(s) {document.getElementById("alert").style.display = s;}
     </script>
   </body>
 </html>
